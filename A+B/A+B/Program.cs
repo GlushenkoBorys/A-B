@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace A_B
 {
@@ -10,9 +11,21 @@ namespace A_B
     {
         static void Main(string[] args)
         {
-            int b;
-            int c;//
-            int d;//
+            string writePath = @"D:\OUTPUT.TXT";
+
+            int a = 5;
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                {
+                    sw.WriteLine(a);
+                }
+                Console.WriteLine("Запись выполнена");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
