@@ -11,21 +11,39 @@ namespace A_B
     {
         static void Main(string[] args)
         {
-            string writePath = @"D:\OUTPUT.TXT";
+            string path = @"D:\INPUT.TXT";
 
-            int a = 5;
             try
             {
-                using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    sw.WriteLine(a);
+                    Console.WriteLine(sr.ReadToEnd());
                 }
-                Console.WriteLine("Запись выполнена");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+
+
+
+
+
+            //string writePath = @"D:\OUTPUT.TXT";
+
+            //int a = 5;
+            //try
+            //{
+            //    using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+            //    {
+            //        sw.WriteLine(a);
+            //    }
+            //    Console.WriteLine("Запись выполнена");
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
         }
     }
 }
