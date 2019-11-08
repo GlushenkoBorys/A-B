@@ -17,7 +17,10 @@ namespace A_B
             {
                 using (StreamReader sr = new StreamReader(path))
                 {
-                    Console.WriteLine(sr.ReadToEnd());
+                    //Console.WriteLine(sr.ReadToEnd());
+                    string my = sr.ReadToEnd();
+                    //int b = sr.();
+                    Console.WriteLine(my);
                 }
             }
             catch (Exception e)
