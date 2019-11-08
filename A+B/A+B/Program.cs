@@ -11,7 +11,8 @@ namespace A_B
         static void Main(string[] args)
         {
             int b;
-            int c; //
+            int c;
+            int d;
         }
     }
 }
