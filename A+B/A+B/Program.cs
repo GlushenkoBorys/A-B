@@ -12,7 +12,7 @@ namespace A_B
         {
             int b;
             int c;
-            int d;
+            int d;//
         }
     }
 }
