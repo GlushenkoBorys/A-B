@@ -19,8 +19,10 @@ namespace A_B
                 {
                     //Console.WriteLine(sr.ReadToEnd());
                     string my = sr.ReadToEnd();
-                    //int b = sr.();
-                    Console.WriteLine(my);
+                    int intValue = TryParse(my);
+                    //string my = "5";
+                    //int b = Convert.ToInt32(my);
+                    Console.WriteLine(intValue);
                 }
             }
             catch (Exception e)
