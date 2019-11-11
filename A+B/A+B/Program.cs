@@ -18,7 +18,7 @@ namespace A_B
                 using (StreamReader sr = new StreamReader(path))
                 {
                     Console.WriteLine(sr.ReadToEnd());
-                    string my = sr.ToString();
+                    //string my = sr.ToString();
                     //int my = Convert.ToInt32(sr.ReadLine());
                     
                     //string my = "5";
