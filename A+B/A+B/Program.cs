@@ -18,12 +18,22 @@ namespace A_B
                 using (StreamReader sr = new StreamReader(path))
                 {
                     Console.WriteLine(sr.ReadToEnd());
-                    //string my = sr.ToString();
-                    //int my = Convert.ToInt32(sr.ReadLine());
-                    
-                    //string my = "5";
-                    //int b = Convert.ToInt32(my);
-                    Console.WriteLine(my);
+                    //Char[] buffer = new char[5];
+                    //int a  = sr.Peek();
+                    //foreach (var item in buffer)
+                    //{
+                    //    Console.WriteLine(item);
+                    //}
+                    //Console.WriteLine(a);
+
+                    int input;
+                    bool isValid = int.TryParse(sr.ReadLine(), out input);
+
+                    if (isValid)
+                    {
+                        Console.WriteLine(input);
+  
+                    }
                 }
             }
             catch (Exception e)
