@@ -18,22 +18,17 @@ namespace A_B
                 using (StreamReader sr = new StreamReader(path))
                 {
                     Console.WriteLine(sr.ReadToEnd());
-                    //Char[] buffer = new char[5];
-                    //int a  = sr.Peek();
-                    //foreach (var item in buffer)
-                    //{
-                    //    Console.WriteLine(item);
-                    //}
-                    //Console.WriteLine(a);
-
-                    int input;
-                    bool isValid = int.TryParse(sr.ReadLine(), out input);
-
-                    if (isValid)
+                    int [] my = new int [5];
+                    int len = 5;
+                    for (int i = 0; i < len; i++)
                     {
-                        Console.WriteLine(input);
-  
+                        my[i] = sr.Peek();
+                        Console.WriteLine(my[i]);
                     }
+                    
+                    Console.WriteLine(my);
+
+                  
                 }
             }
             catch (Exception e)
