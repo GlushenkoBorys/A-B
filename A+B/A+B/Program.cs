@@ -13,73 +13,35 @@ namespace A_B
         {
             string path = @"D:\INPUT.TXT";
 
-            try
+            string line;
+            string text = null;
+            using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
             {
-                using (StreamReader sr = new StreamReader(path))
+                while ((line = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(sr.ReadToEnd());
-                    //int [] my = new int [5];
-                    //int len = 5;
-                    //for (int i = 0; i < len; i++)
-                    //{
-                    //    my[i] = sr.Peek();
-                    //    Console.WriteLine(my[i]);
-                    //}
-
-                    //Console.WriteLine(my);
-                    //bool n;
-                    //string b;
-                    //n = sr.ReadLine() is string;
-                    //b = sr.ReadToEnd();
-                    //Console.WriteLine(n);
-                    //Console.WriteLine(b);
-                    string my = sr.ReadLine().ToString();
-
-                    //string text = sr.ReadLine();
-                    //string[] words = my.Split(new char[] { ' ' });
-
-                    //foreach (string s in words)
-                    //{
-                    //    Console.WriteLine(s);
-                    //}
-                    string text = "2 3";
-
-                    string[] words = my.Split(new char[] { ' ' });
-
-                    int d = 0;
-                    foreach (string s in words)
-                    {                        
-                        int b = Convert.ToInt32(s);
-                        d = d + b;
-                    }
-                    Console.WriteLine(d);
-
+                    text = text + line;
                 }
             }
-            catch (Exception e)
+
+            string[] numbers = text.Split(new char[] { ' ' });
+
+            int sum = 0;
+            foreach (string number in numbers)
             {
-                Console.WriteLine(e.Message);
+                int b = Convert.ToInt32(number);
+                sum = sum + b;
             }
+            Console.WriteLine(sum);
 
 
+            string writePath = @"D:\OUTPUT.TXT";
 
+                using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                {
+                    sw.WriteLine(sum);
+                }
+                Console.WriteLine("Запись выполнена");
 
-
-            //string writePath = @"D:\OUTPUT.TXT";
-
-            //int a = 5;
-            //try
-            //{
-            //    using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
-            //    {
-            //        sw.WriteLine(a);
-            //    }
-            //    Console.WriteLine("Запись выполнена");
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
         }
     }
 }
