@@ -33,14 +33,25 @@ namespace A_B
                     //b = sr.ReadToEnd();
                     //Console.WriteLine(n);
                     //Console.WriteLine(b);
-                    string my = sr.ReadToEnd();
+                    //string my = sr.ReadToEnd().ToString();
 
-                    string text = sr.ReadLine();
-                    string[] words = my.Split(new char[] { ' ' });
+                    //string text = sr.ReadLine();
+                    //string[] words = my.Split(new char[] { ' ' });
+
+                    //foreach (string s in words)
+                    //{
+                    //    Console.WriteLine(s);
+                    //}
+                    string text = "2 3";
+
+                    string[] words = text.Split(new char[] { ' ' });
 
                     foreach (string s in words)
                     {
-                        Console.WriteLine(s);
+                        int d;
+                        int b = Convert.ToInt32(s);
+                        d = d + b;
+                        Console.WriteLine(d);
                     }
 
                 }
