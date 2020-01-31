@@ -10,9 +10,9 @@ namespace A_B
     class Program
     {
         static void Main(string[] args)
-        {
-            string path = @"D:\INPUT.TXT";
-
+        { 
+            // ooo
+            string path = @"INPUT.TXT";
             string line;
             string text = null;
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
@@ -34,14 +34,12 @@ namespace A_B
             Console.WriteLine(sum);
 
 
-            string writePath = @"D:\OUTPUT.TXT";
+            string writePath = @"OUTPUT.TXT";
 
                 using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
                 {
                     sw.WriteLine(sum);
                 }
-                Console.WriteLine("Запись выполнена");
-
         }
     }
 }
