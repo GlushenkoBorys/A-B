@@ -11,7 +11,7 @@ namespace A_B
     {
         static void Main(string[] args)
         { 
-            // ooo
+            // oooo
             string path = @"INPUT.TXT";
             string line;
             string text = null;
